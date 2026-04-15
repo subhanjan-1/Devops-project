@@ -29,7 +29,7 @@ def home():
         try:
             
             age = int(request.form['age'])
-            cgpa = float(request.form['error'])
+            cgpa = float(request.form['cgpa'])
             backlogs = int(request.form['backlogs'])
             comm = int(request.form['communication'])
             coding = int(request.form['coding'])  

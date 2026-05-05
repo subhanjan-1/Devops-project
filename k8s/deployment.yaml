@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: placement-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: placement
+  template:
+    metadata:
+      labels:
+        app: placement
+    spec:
+      containers:
+      - name: placement-container
+        image: subhanjansaha/student-placement-app:latest
+        ports:
+        - containerPort: 10000
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "500m"
